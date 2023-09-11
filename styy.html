@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<title>三潭印月</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 	</head>
 	<style>
 		body {
@@ -44,6 +45,8 @@
 		  text-decoration: none;
 		  z-index: 9999;
 		}
+		
+		
 		.menu {
 		  width: 25%;
 		  height: 100vh;
@@ -104,7 +107,7 @@
 			padding: 5px 10px;
 		}
 		.styy h2{
-			text-align:center;
+			text-align: center;
 		}
 		.hs{
 			width: 25%;
@@ -130,6 +133,37 @@
 			float: left;
 			margin-left: 10px;
 		}
+		/* 定义箭头样式 */
+		.arrow {
+		  font-size: 20px;
+		  vertical-align: middle;
+		}
+		
+		/* 定义按钮样式 */
+		.button {
+		  display: inline-block;
+		  padding: 5px 8px;
+		  border: none;
+		  border-radius: 3px;
+		  background-color: #989998;
+		  color: white;
+		  cursor: pointer;
+		  font-size: 8px;
+		}
+		.pagination  {
+		  position: fixed;
+		  bottom: 20px;
+		  left: 50%;
+		  transform: translateX(-50%);
+		}
+		
+		/* 定义按钮 hover 状态的样式 */
+		.button:hover {
+		  background-color: #979897;
+		}
+		.button i {
+		      font-size: 8px; /* 这里设置图标的大小 */
+		    }
 	</style>
 	<body>
 		<div class="container">
@@ -197,6 +231,22 @@
 			<img class="st" src="wa/st.jpg"/>
 			<p>由于三潭印月的美丽景色，我国将它的形象放在了钱币上。最先是七十年代末的外汇兑换券1元，正面就是翠绿色的三潭印月图案；然后第五套人民
 			币的一元纸币的背面风景也采用了几乎一样的图案——水中的三座石塔。因此，三潭印月的名气大增。</p>
+			<div class="pagination">
+			    <a href="https://lwenxue.github.io/west_hggy/hggy.html" class="prev">
+					<!-- 上一页按钮 -->
+				  <button class="button" onclick="goToPreviousPage()">
+					<i class="arrow fas fa-chevron-left"></i>
+					上一页
+				  </button>
+				</a>
+			    <a href="https://lwenxue.github.io/west_npwz/npwz.html" class="next">
+					<!-- 下一页按钮 -->
+					<button class="button" onclick="goToNextPage()">
+										下一页
+					<i class="arrow fas fa-chevron-right"></i>
+					</button>
+				</a>
+			</div>
 		</div>
 	</body>
 	<script>
